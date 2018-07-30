@@ -1,0 +1,246 @@
+<div id="angularRoot">
+  <div fxLayout="column" fxShow="true" fxHide="false">
+    <mat-toolbar>
+      <div fxLayout="row" fxLayoutGap="20px" fxShow="true" fxHide="false">
+        <div fxLayout="row" fxLayoutGap="50px" fxShow="true" fxHide="false">
+          <mat-icon class="material-icons" (click)="sidenav.toggle()">menu</mat-icon>
+        </div>
+      </div>
+      <div fxLayout="row" fxFlex="100" fxLayoutGap="45px" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+        <mat-icon class="material-icons" matTooltip="Notification">speaker_notes</mat-icon>
+        <mat-icon class="material-icons" matTooltip="Apps">apps</mat-icon>
+        <mat-icon class="material-icons" matTooltip="Login">input</mat-icon>
+        <mat-icon class="material-icons" matTooltip="Events">event_note</mat-icon>
+      </div>
+    </mat-toolbar>
+  </div>
+  <div fxLayout="column" fxShow="true" fxHide="false">
+    <mat-sidenav-container fullscreen="">
+      <mat-sidenav #sidenav="" [(opened)]="opened" mode="side" (toggle)="sidenav.toggle()">
+        <div fxLayout="column" fxLayoutGap="5px" fxLayoutAlign="start start" fxShow="true" fxHide="false">
+          <mat-card>
+            <div fxLayout="column" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+              <img mat-card-image="" style="width:40%" imgSrc="Web/Icons/employ.png">
+              <mat-card-subtitle>Admin</mat-card-subtitle>
+            </div>
+          </mat-card>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Dashboard
+                </mat-panel-title>
+
+              </mat-expansion-panel-header>
+              <mat-nav-list>
+                <a mat-list-item="">Analytics</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Interface</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">App Views</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Charts</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Box Transitions</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Common Views</a>
+              </mat-nav-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+          <mat-accordion>
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  Analytics
+                </mat-panel-title>
+
+              </mat-expansion-panel-header>
+              <mat-nav-list>
+                <a mat-list-item="">Analytics</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Interface</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">App Views</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Charts</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Box Transitions</a>
+              </mat-nav-list>
+              <mat-nav-list>
+                <a mat-list-item="">Common Views</a>
+              </mat-nav-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </mat-sidenav>
+      <div fxLayout="column" class="row1" fxFlex="100" fxLayoutGap="60px" fxShow="true" fxHide="false">
+        <mat-card>
+          <div fxLayout="row" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
+            <div fxLayout="column" class="row1_on1" fxFlex="30" fxLayoutAlign="center start" fxShow="true" fxHide="false">
+              <mat-card-subtitle>page views</mat-card-subtitle>
+              <h1>226,802</h1>
+              <mat-card-subtitle>Page views in last month</mat-card-subtitle>
+            </div>
+            <div fxLayout="column" class="row1_on2" fxFlex="40" fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
+              <canvas baseChart="" [datasets]="lineChartData" style="width:100%; height:100%" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" chartType="line" (chartHover)="chartHovered($event)"
+                (chartClick)="hartClicked($event)"></canvas>
+            </div>
+            <div fxLayout="column" class="row1_on3" fxFlex="30" fxLayoutAlign="center end" fxShow="true" fxHide="false">
+              <mat-card-subtitle> Active duration</mat-card-subtitle>
+              <h1>10 Months</h1>
+              <mat-card-subtitle>And four weeks</mat-card-subtitle>
+            </div>
+          </div>
+        </mat-card>
+        <div fxLayout="row" fxLayoutGap="20px" fxShow="true" fxHide="false" fxLayout.xs="column">
+          <div fxLayout="column" fxFlex="25" fxShow="true" fxHide="false">
+            <mat-card style="     height: 100%;" class="row2_col1">
+              <div fxLayout="column" fxFlex="100" fxLayoutGap="20px" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxLayoutAlign="center start" fxShow="true" fxHide="false">
+                  <mat-icon style="font-size:45px;" class="material-icons">timeline</mat-icon>
+                </div>
+                <div fxLayout="column" fxLayoutGap="10px" fxLayoutAlign="end center" fxShow="true" fxHide="false">
+                  <mat-card-title>$1 206,90</mat-card-title>
+                  <mat-card-subtitle style="font-size:20px; ">All Income</mat-card-subtitle>
+                  <mat-card-content>
+                    <mat-card-subtitle style="font-size:12px; text-align:center;" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum.</mat-card-subtitle>
+                  </mat-card-content>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          <div fxLayout="column" fxFlex="25" fxShow="true" fxHide="false">
+            <mat-card style="     height: 100%;">
+              <div fxLayout="row" fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <mat-card-subtitle>USERS ACTIVITY</mat-card-subtitle>
+                </div>
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <mat-icon style="font-size: 30px;" class="material-icons">share</mat-icon>
+                </div>
+              </div>
+              <div fxLayout="column" fxShow="true" fxHide="false">
+                <mat-card-title>210</mat-card-title>
+                <mat-card-subtitle>Social users</mat-card-subtitle>
+                <mat-progress-bar mode="Buffer" color="primary" value="60" bufferValue="60"></mat-progress-bar>
+                <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-between end" fxShow="true" fxHide="false">
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-subtitle>Pages / Visit</mat-card-subtitle>
+                    <mat-card-subtitle style="font-size:18px;">7.80</mat-card-subtitle>
+                  </div>
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-subtitle>% New Visits</mat-card-subtitle>
+                    <mat-card-subtitle style="font-size:18px;">76.43%</mat-card-subtitle>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          <div fxLayout="column" fxFlex="25" fxShow="true" fxHide="false">
+            <mat-card style="     height: 100%;" class="row2_col2">
+              <div fxLayout="row" fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <mat-card-subtitle>PAGE VIEWS</mat-card-subtitle>
+                </div>
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <mat-icon style="font-size: 30px;" class="material-icons">laptop</mat-icon>
+                </div>
+              </div>
+              <div fxLayout="column" fxLayoutGap="10px" fxShow="true" fxHide="false">
+                <mat-card-title>860k+</mat-card-title>
+                <mat-card-subtitle>Social users </mat-card-subtitle>
+                <mat-card-content>
+                  <mat-card-subtitle style="font-size:12px;" class="paragraph">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</mat-card-subtitle>
+                </mat-card-content>
+              </div>
+            </mat-card>
+          </div>
+          <div fxLayout="column" fxFlex="25" fxShow="true" fxHide="false">
+            <mat-card style="     height: 100%;" class="row2_col4">
+              <div fxLayout="row" fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <mat-card-subtitle>TODAY INCOME</mat-card-subtitle>
+                </div>
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <mat-icon style="font-size: 30px;" class="material-icons">attach_money</mat-icon>
+                  <mat-card-content></mat-card-content>
+                </div>
+              </div>
+              <div fxLayout="column" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxShow="true" fxHide="false">
+                  <canvas baseChart="" [datasets]="lineChartData" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" chartType="line"></canvas>
+                </div>
+                <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="space-evenly center" fxShow="true" fxHide="false">
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-subtitle>Today</mat-card-subtitle>
+                    <mat-card-subtitle>$230,00</mat-card-subtitle>
+                  </div>
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-subtitle>Last week</mat-card-subtitle>
+                    <mat-card-subtitle>$7,980,60</mat-card-subtitle>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+        </div>
+        <div fxLayout="row" fxLayoutGap="20px" fxShow="true" fxHide="false" fxLayout.xs="column">
+          <div fxLayout="column" fxFlex="30" fxShow="true" fxHide="false">
+            <mat-card>
+              <div fxLayout="row" fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxLayoutAlign="start start" fxShow="true" fxHide="false">
+                  <mat-card-subtitle>ACTIVITY</mat-card-subtitle>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end start" fxShow="true" fxHide="false">
+                  <mat-icon class="material-icons">group_add</mat-icon>
+                </div>
+              </div>
+              <div fxLayout="column" fxShow="true" fxHide="false">
+                <mat-card-subtitle> Social users </mat-card-subtitle>
+                <mat-card-subtitle style="font-size:12px;" class="paragraph">Lorem Ipsum is simply dummy text of the printing simply all dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.</mat-card-subtitle>
+              </div>
+              <div fxLayout="column" fxShow="true" fxHide="false">
+                <div fxLayout="row" fxLayoutAlign="space-between end" fxShow="true" fxHide="false">
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-title>300,102</mat-card-title>
+                    <mat-card-subtitle>98%</mat-card-subtitle>
+                  </div>
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-title>280,200</mat-card-title>
+                    <mat-card-subtitle>98%</mat-card-subtitle>
+                  </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="space-between end" fxShow="true" fxHide="false">
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-title>120,108</mat-card-title>
+                    <mat-card-subtitle>38% </mat-card-subtitle>
+                  </div>
+                  <div fxLayout="column" fxShow="true" fxHide="false">
+                    <mat-card-title>450,600</mat-card-title>
+                    <mat-card-subtitle>28%</mat-card-subtitle>
+                  </div>
+                </div>
+              </div>
+            </mat-card>
+          </div>
+          <div fxLayout="column" fxFlex="40" fxShow="true" fxHide="false">
+            <mat-card></mat-card>
+          </div>
+          <div fxLayout="column" fxFlex="30" fxShow="true" fxHide="false">
+            <mat-card></mat-card>
+          </div>
+        </div>
+      </div>
+    </mat-sidenav-container>
+    <router-outlet></router-outlet>
+  </div>
+</div>

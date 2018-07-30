@@ -1,0 +1,41 @@
+/*Importing default angular material css theme. */
+
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "nDefaults.scss";
+
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: inherit;
+   font-weight: 700;
+    line-height: 1.1;
+    color: #696c6e;
+}
+.mat-expansion-panel {
+    box-shadow:none !important;
+    background: #fafafa !important;
+}
+.mat-card-image:first-child {
+    margin-top: 0 !important;
+}
+.mat-toolbar {
+    background: #fff !important;
+    box-shadow: 0 1px 10px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.1)  !important;
+    height: 55px;
+    border: 0;
+    z-index: 10;
+}
+.row1{
+    padding:25px 40px 40px 40px;
+}
+.row1_on1, .row1_on2, .row1_on3{
+padding-right: 35px;
+padding-left: 35px;
+}
+
+body{
+    color: #6a6c6f;
+}
+
+.mat-drawer-container[fullscreen]{
+    top:65px !important;
+}

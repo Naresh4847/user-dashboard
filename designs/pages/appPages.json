@@ -1,0 +1,12 @@
+{
+    "5baa1802-fa51-8d49-bee0-5fa4ae4e3010": {
+        "appPageName": "bashboard",
+        "componentName": "bashboardComponent",
+        "isEntry": false
+    },
+    "7b6b1ede-4583-7a0d-4fb1-7564ba7a5280": {
+        "appPageName": "user",
+        "componentName": "userComponent",
+        "isEntry": false
+    }
+}
