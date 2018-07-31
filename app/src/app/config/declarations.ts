@@ -22,6 +22,8 @@ import { bsignatureComponent } from '../bsignatureComponent/bsignature.component
 import { btoggleoptionsComponent } from '../btoggleoptionsComponent/btoggleoptions.component';
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-buserdashboardService
+import { buserdashboardService } from '../services/buserdashboard/buserdashboard.service';
 //CORE_REFERENCE_IMPORT-userComponent
 import { userComponent } from '../userComponent/user.component';
 //CORE_REFERENCE_IMPORT-bashboardComponent
@@ -85,6 +87,8 @@ export const appProviders = [
   NotificationService,
   BAuthGuard,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-buserdashboardService
+buserdashboardService,
   LocalStorageService,
   PubSubService,
   BLoginService,
