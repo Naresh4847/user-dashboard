@@ -4,44 +4,51 @@ import { ModelMethods } from '../lib/model.methods';
 import { BDataModelService } from '../service/bDataModel.service';
 import { buserdashboardService } from '../services/buserdashboard/buserdashboard.service';
 
-
 /**
 * Model import Example :
 * import { HERO } from '../models/hero.model';
 */
 
+/**
+ * Service import Example :
+ * import { HeroService } from '../services/hero/hero.service';
+ */
+
 @Component({
-    selector: 'bh-bashboard',
-    templateUrl: './bashboard.template.html'
+    selector: 'bh-dashboard',
+    templateUrl: './dashboard.template.html'
 })
 
-// export interface cardDetails {
-//   cardTitle: string;
-//   cardSubTitle: string;
+export class dashboardComponent implements OnInit {
+    dm: ModelMethods;
 
-// }
-export class bashboardComponent {
-    cardData;
-    cardData1;
-    cardData2;
-    cardData3;
-    cardData4;
-    cardData5;
-    carditem;
+    activeusers;
+    userviews;
+    useractivity;
+    currentactivity;
+    userimprovements;
+    lastactiveusers;
+    useritems;
     menu;
     menuitem;
 
-    constructor(private userdashboard: buserdashboardService) {
-        this.cardData = userdashboard.cardData;
-        this.cardData1 = userdashboard.cardData1;
-        this.cardData2 = userdashboard.cardData2;
-        this.cardData3 = userdashboard.cardData3;
-        this.cardData4 = userdashboard.cardData4;
-        this.cardData5 = userdashboard.cardData5;
-        this.carditem = userdashboard.carditem;
+    constructor(private userdashboard: buserdashboardService, private bdms: BDataModelService) {
+        this.dm = new ModelMethods(bdms);
+        this.activeusers = userdashboard.activeusers;
+        this.userviews = userdashboard.userviews;
+        this.useractivity = userdashboard.useractivity;
+        this.currentactivity = userdashboard.currentactivity;
+        this.userimprovements = userdashboard.userimprovements;
+        this.lastactiveusers = userdashboard.lastactiveusers;
+        this.useritems = userdashboard.useritems;
         this.menu = userdashboard.menu;
+        console.log(this.menu);
         this.menuitem = userdashboard.menuitem;
     }
+    ngOnInit() {
+
+    }
+
 
 
     // lineChart
@@ -54,29 +61,20 @@ export class bashboardComponent {
         responsive: true
     };
     public lineChartColors: Array<any> = [
-        { // dark grey
-            backgroundColor: 'rgba(76,175,80,0.61)',
+
+        { // Light Green
+            backgroundColor: '#e4402cab',
             borderColor: 'rgba(77,83,96,1)',
             pointBackgroundColor: 'rgba(22, 144, 27, 0.61)',
             pointBorderColor: '#fff',
             pointHoverBackgroundColor: '#fff',
             pointHoverBorderColor: 'rgba(77,83,96,1)'
         }
-
     ];
     public lineChartLegend: boolean = true;
+
     public lineChartType: string = 'line';
 
-    public randomize(): void {
-        let _lineChartData: Array<any> = new Array(this.lineChartData.length);
-        for (let i = 0; i < this.lineChartData.length; i++) {
-            _lineChartData[i] = { data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label };
-            for (let j = 0; j < this.lineChartData[i].data.length; j++) {
-                _lineChartData[i].data[j] = Math.floor((Math.random() * 100) + 1);
-            }
-        }
-        this.lineChartData = _lineChartData;
-    }
 
     // events
     public chartClicked(e: any): void {
@@ -86,11 +84,6 @@ export class bashboardComponent {
     public chartHovered(e: any): void {
         console.log(e);
     }
-
-
-
-    dm: ModelMethods;
-
 
     get(dataModelName, filter?, keys?, sort?, pagenumber?, pagesize?) {
         this.dm.get(dataModelName, this, filter, keys, sort, pagenumber, pagesize,

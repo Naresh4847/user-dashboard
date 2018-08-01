@@ -315,8 +315,16 @@
                 "_attrDef": "p"
             },
             {
+                "3": false,
                 "_key": "matTooltip",
                 "_value": "Login",
+                "_type": "kv",
+                "_attrDef": "c"
+            },
+            {
+                "4": false,
+                "_key": "[routerLink]",
+                "_value": "'adminlogin'",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -427,30 +435,6 @@
         ],
         "type": 1
     },
-    "59d0f8a9-6073-6380-1c1e-45f6473ef358": {
-        "name": "NG-RouterOutlet",
-        "guid": "59d0f8a9-6073-6380-1c1e-45f6473ef358",
-        "template": "<router-outlet %bCustomProps%></router-outlet>",
-        "designerTemplate": "<div class=\"router routerborder bkeeper-container-label\"><i style=\"font-size: 32px;\" class=\"material-icons validate\">input</i></div>",
-        "paletteTemplate": "Router Outlet",
-        "templateUrl": "https://coryrylan.com/blog/introduction-to-angular-routing",
-        "htmlAttributes": [
-            {
-                "_key": "style",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            },
-            {
-                "1": false,
-                "_key": "class",
-                "_value": "",
-                "_type": "kv",
-                "_attrDef": "p"
-            }
-        ],
-        "type": 6
-    },
     "543e3577-6afe-0ac3-e478-2466eb4d8f52": {
         "name": "NG-sidenav",
         "guid": "543e3577-6afe-0ac3-e478-2466eb4d8f52",
@@ -476,14 +460,14 @@
             {
                 "2": false,
                 "_key": "mode",
-                "_value": "side",
+                "_value": "over",
                 "_type": "kv",
                 "_attrDef": "p"
             },
             {
                 "3": false,
                 "_key": "opened",
-                "_value": "",
+                "_value": "true",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -518,16 +502,9 @@
             {
                 "8": false,
                 "_key": "(toggle)",
-                "_value": "sidenav.toggle()",
+                "_value": "",
                 "_type": "kv",
                 "_attrDef": "p"
-            },
-            {
-                "9": false,
-                "_key": " [(opened)]",
-                "_value": "fasle",
-                "_type": "kv",
-                "_attrDef": "c"
             }
         ],
         "type": 6
@@ -751,7 +728,7 @@
             {
                 "5": false,
                 "_key": "fxLayoutAlign",
-                "_value": "center start",
+                "_value": "space-around center",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -772,7 +749,7 @@
             {
                 "8": false,
                 "_key": "*ngFor",
-                "_value": "let card of cardData1",
+                "_value": "let card of userviews",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -825,7 +802,7 @@
             {
                 "5": false,
                 "_key": "fxLayoutAlign",
-                "_value": "center end",
+                "_value": "space-around center",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -844,8 +821,9 @@
                 "_attrDef": "p"
             },
             {
+                "8": false,
                 "_key": "*ngFor",
-                "_value": "let card of cardData",
+                "_value": "let card of activeusers",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -972,7 +950,7 @@
             {
                 "5": false,
                 "_key": "fxLayoutAlign",
-                "_value": "center center",
+                "_value": "space-around center",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -1692,7 +1670,7 @@
             {
                 "0": false,
                 "_key": "style",
-                "_value": "color:#2cab44;",
+                "_value": "color:#ff1c00",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -1816,7 +1794,7 @@
             {
                 "1": false,
                 "_key": "class",
-                "_value": "",
+                "_value": "sub-top",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -2142,7 +2120,7 @@
             },
             {
                 "_key": "html",
-                "_value": "<mat-accordion>\n\t<mat-expansion-panel>\n\t\t<mat-expansion-panel-header *ngFor =\"let card of menu\">\n\t\t\t<mat-panel-title>\n\t\t\t{{card.nav_one}}\n\t\t\t</mat-panel-title>\n\t\t</mat-expansion-panel-header>\n\t\t<mat-nav-list  *ngFor=\"let card of menuitem\">\n\t\t\t<a mat-list-item>\t{{card.navitem}}</a>\n\t\t</mat-nav-list>\n  \n\t</mat-expansion-panel>\n</mat-accordion>",
+                "_value": "<mat-accordion>\n\t<mat-expansion-panel>\n\t\t<mat-expansion-panel-header *ngFor =\"let card of menu\">\n\t\t\t<mat-panel-title>\n\t\t\t{{card.nav_one}}\n\t\t\t</mat-panel-title>\n\t\t</mat-expansion-panel-header>\n\t\t<mat-nav-list  *ngFor=\"let card of menuitem\">\n\t\t\t<a mat-list-item>\t{{card.navitem}}</a>\n\t\t</mat-nav-list>\n\t</mat-expansion-panel>\n</mat-accordion>",
                 "_type": "a",
                 "_attrDef": "p"
             }
@@ -2758,7 +2736,14 @@
                 "8": false,
                 "9": false,
                 "_key": "*ngFor",
-                "_value": "let card of cardData2",
+                "_value": "let card of useractivity",
+                "_type": "kv",
+                "_attrDef": "c"
+            },
+            {
+                "9": false,
+                "_key": "fxFlex.sm",
+                "_value": "49",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -2828,8 +2813,9 @@
                 "_attrDef": "p"
             },
             {
+                "8": false,
                 "_key": "*ngFor",
-                "_value": "let card of cardData3",
+                "_value": "let card of currentactivity",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -2902,7 +2888,7 @@
             {
                 "8": false,
                 "_key": "*ngFor",
-                "_value": "let card of cardData4",
+                "_value": "let card of userimprovements",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -2939,6 +2925,7 @@
                 "_attrDef": "p"
             },
             {
+                "3": false,
                 "_key": "fxLayoutWrap",
                 "_value": "",
                 "_type": "kv",
@@ -3083,7 +3070,7 @@
             {
                 "1": false,
                 "_key": "class",
-                "_value": "",
+                "_value": "user_content",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -3881,6 +3868,7 @@
                 "_attrDef": "p"
             },
             {
+                "6": false,
                 "_key": "fxShow",
                 "_value": "true",
                 "_type": "kv",
@@ -3904,6 +3892,7 @@
         "templateUrl": "https://material.angular.io/components/card/overview",
         "htmlAttributes": [
             {
+                "0": false,
                 "_key": "style",
                 "_value": "",
                 "_type": "kv",
@@ -3944,7 +3933,7 @@
             {
                 "1": false,
                 "_key": "class",
-                "_value": "",
+                "_value": "user_content",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -4079,6 +4068,7 @@
         "templateUrl": "https://github.com/angular/flex-layout/wiki/fxLayout-API",
         "htmlAttributes": [
             {
+                "0": false,
                 "_key": "style",
                 "_value": "",
                 "_type": "kv",
@@ -4442,6 +4432,7 @@
         "templateUrl": "https://material.angular.io/components/card/overview",
         "htmlAttributes": [
             {
+                "0": false,
                 "_key": "style",
                 "_value": "",
                 "_type": "kv",
@@ -4450,7 +4441,7 @@
             {
                 "1": false,
                 "_key": "class",
-                "_value": "",
+                "_value": "user_content",
                 "_type": "kv",
                 "_attrDef": "p"
             },
@@ -4534,6 +4525,7 @@
         "templateUrl": "https://material.angular.io/components/card/overview",
         "htmlAttributes": [
             {
+                "0": false,
                 "_key": "style",
                 "_value": "",
                 "_type": "kv",
@@ -4653,7 +4645,7 @@
             {
                 "8": false,
                 "_key": "*ngFor",
-                "_value": "let card of carditem",
+                "_value": "let card of useritems",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -4998,6 +4990,7 @@
                 "_attrDef": "p"
             },
             {
+                "3": false,
                 "_key": "fxLayoutWrap",
                 "_value": "",
                 "_type": "kv",
@@ -5033,7 +5026,7 @@
             {
                 "8": false,
                 "_key": "*ngFor",
-                "_value": "let card of cardData5",
+                "_value": "let card of lastactiveusers",
                 "_type": "kv",
                 "_attrDef": "c"
             }
@@ -5182,6 +5175,274 @@
                 "2": false,
                 "_key": "IconName",
                 "_value": "{{card. cardIcon}}",
+                "_type": "a",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 5
+    },
+    "3522bac0-7948-d0a0-174e-702de9a7be28": {
+        "name": "NG-Footer",
+        "guid": "3522bac0-7948-d0a0-174e-702de9a7be28",
+        "template": "<footer %style% %class% %bCustomProps%></footer>",
+        "designerTemplate": "<div class=\"ad-footer ad-charts-border drop bkeeper-container-label\"></div>",
+        "paletteTemplate": "Footer",
+        "templateUrl": "https://www.w3schools.com/tags/tag_footer.asp",
+        "htmlAttributes": [
+            {
+                "0": false,
+                "_key": "style",
+                "_value": "background-color:#ff0909;width:100%;",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "1": false,
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 1
+    },
+    "6dbaa898-c269-f7fd-ffaf-23e5154b45d9": {
+        "name": "NG-RouterOutlet",
+        "guid": "6dbaa898-c269-f7fd-ffaf-23e5154b45d9",
+        "template": "<router-outlet %bCustomProps%></router-outlet>",
+        "designerTemplate": "<div class=\"router routerborder bkeeper-container-label\"><i style=\"font-size: 32px;\" class=\"material-icons validate\">input</i></div>",
+        "paletteTemplate": "Router Outlet",
+        "templateUrl": "https://coryrylan.com/blog/introduction-to-angular-routing",
+        "htmlAttributes": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 6
+    },
+    "ed89a899-06f0-5ab9-4dc6-bba3f46ccbd1": {
+        "name": "FlexLayoutRow",
+        "guid": "ed89a899-06f0-5ab9-4dc6-bba3f46ccbd1",
+        "template": "<div fxLayout=\"row\" %style% %class% %fxFlex% %fxLayoutWrap% %fxLayoutGap% %fxLayoutAlign% %fxShow% %fxHide% %bCustomProps%></div>",
+        "designerTemplate": "<div class=\"row drop bkeeper-container-label\"></div>",
+        "paletteTemplate": "Flex Layout Row",
+        "templateUrl": "https://github.com/angular/flex-layout/wiki/fxLayout-API",
+        "htmlAttributes": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "1": false,
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutWrap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutAlign",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxShow",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxHide",
+                "_value": "false",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 1
+    },
+    "1e2fb0a9-cc76-f87d-b663-9d34932dee0a": {
+        "name": "NG-H6",
+        "guid": "1e2fb0a9-cc76-f87d-b663-9d34932dee0a",
+        "template": "<h6 %bCustomProps% %style% %class%>%H6 Text%</h6>",
+        "designerTemplate": "<div class=\"ad-header-elements ad-h6\">h6</div>",
+        "paletteTemplate": "h6",
+        "templateUrl": "https://www.w3schools.com/tags/tag_hn.asp",
+        "htmlAttributes": [
+            {
+                "0": false,
+                "_key": "style",
+                "_value": "color:white",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "1": false,
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "2": false,
+                "_key": "H6 Text",
+                "_value": "Neutrinos India Pvt Ltd @2018",
+                "_type": "a",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 5
+    },
+    "954874b7-0a6a-3152-3679-ec945ab9cec3": {
+        "name": "FlexLayoutRow",
+        "guid": "954874b7-0a6a-3152-3679-ec945ab9cec3",
+        "template": "<div fxLayout=\"row\" %style% %class% %fxFlex% %fxLayoutWrap% %fxLayoutGap% %fxLayoutAlign% %fxShow% %fxHide% %bCustomProps%></div>",
+        "designerTemplate": "<div class=\"row drop bkeeper-container-label\"></div>",
+        "paletteTemplate": "Flex Layout Row",
+        "templateUrl": "https://github.com/angular/flex-layout/wiki/fxLayout-API",
+        "htmlAttributes": [
+            {
+                "0": false,
+                "_key": "style",
+                "_value": "width:100%",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "1": false,
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "2": false,
+                "_key": "fxFlex",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxLayoutWrap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "4": false,
+                "_key": "fxLayoutGap",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "5": false,
+                "_key": "fxLayoutAlign",
+                "_value": "center center",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "6": false,
+                "_key": "fxShow",
+                "_value": "true",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxHide",
+                "_value": "false",
+                "_type": "kv",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 1
+    },
+    "f9fc140f-ecc8-2c03-812b-f9b7ce468f38": {
+        "name": "NG-CardTitle",
+        "guid": "f9fc140f-ecc8-2c03-812b-f9b7ce468f38",
+        "template": "<mat-card-title %bCustomProps% %style% %class%>%Title%</mat-card-title>",
+        "designerTemplate": "<div class=\"ad-card-sub-title\">Card Title</div>",
+        "paletteTemplate": "Card Title",
+        "templateUrl": "https://material.angular.io/components/card/overview",
+        "htmlAttributes": [
+            {
+                "0": false,
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "1": false,
+                "_key": "class",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "2": false,
+                "_key": "Title",
+                "_value": "$260 104,200",
+                "_type": "a",
+                "_attrDef": "p"
+            }
+        ],
+        "type": 1
+    },
+    "0bd98d52-9622-df80-e3b0-7c95b9defd86": {
+        "name": "NG-Paragraph",
+        "guid": "0bd98d52-9622-df80-e3b0-7c95b9defd86",
+        "template": "<p %bCustomProps% %style% %class%>%text%</p>",
+        "designerTemplate": "<div class=\"ad-header-elements ad-h3\">p</div>",
+        "paletteTemplate": "Paragraph",
+        "templateUrl": "https://www.w3schools.com/tags/tag_p.asp",
+        "htmlAttributes": [
+            {
+                "_key": "style",
+                "_value": "",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "1": false,
+                "_key": "class",
+                "_value": "user_conetent",
+                "_type": "kv",
+                "_attrDef": "p"
+            },
+            {
+                "2": false,
+                "_key": "text",
+                "_value": "Updated income ",
                 "_type": "a",
                 "_attrDef": "p"
             }

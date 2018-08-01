@@ -22,12 +22,12 @@ import { bsignatureComponent } from '../bsignatureComponent/bsignature.component
 import { btoggleoptionsComponent } from '../btoggleoptionsComponent/btoggleoptions.component';
 
 //CORE_REFERENCE_IMPORTS
-//CORE_REFERENCE_IMPORT-buserdashboardService
-import { buserdashboardService } from '../services/buserdashboard/buserdashboard.service';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { loginComponent } from '../loginComponent/login.component';
+//CORE_REFERENCE_IMPORT-dashboardComponent
+import { dashboardComponent } from '../dashboardComponent/dashboard.component';
 //CORE_REFERENCE_IMPORT-userComponent
 import { userComponent } from '../userComponent/user.component';
-//CORE_REFERENCE_IMPORT-bashboardComponent
-import { bashboardComponent } from '../bashboardComponent/bashboard.component';
 
 
 export function startupServiceFactory(startupService: BLocalStorageService): Function {
@@ -60,10 +60,12 @@ export const appDeclarations = [
   bsignatureComponent,
   btoggleoptionsComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
+loginComponent,
+//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-dashboardComponent
+dashboardComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userComponent
 userComponent,
-//CORE_REFERENCE_PUSH_TO_DEC_ARRAY-bashboardComponent
-bashboardComponent,
   PageNotFoundComponent,
   bhiveMapComponent
 ];
@@ -87,8 +89,6 @@ export const appProviders = [
   NotificationService,
   BAuthGuard,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-buserdashboardService
-buserdashboardService,
   LocalStorageService,
   PubSubService,
   BLoginService,
@@ -107,6 +107,6 @@ buserdashboardService,
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'dashboard', component: bashboardComponent,
+export const appRoutes = [{path: 'dashboard', component: dashboardComponent,
 children: [{path: 'user', component: userComponent}]},{path: '', redirectTo: 'dashboard/user', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

@@ -1,12 +1,17 @@
 {
-    "5baa1802-fa51-8d49-bee0-5fa4ae4e3010": {
-        "appPageName": "bashboard",
-        "componentName": "bashboardComponent",
-        "isEntry": false
-    },
     "7b6b1ede-4583-7a0d-4fb1-7564ba7a5280": {
         "appPageName": "user",
         "componentName": "userComponent",
+        "isEntry": false
+    },
+    "68b2eec7-7121-4d61-9502-9ac9115aaa78": {
+        "appPageName": "dashboard",
+        "componentName": "dashboardComponent",
+        "isEntry": false
+    },
+    "4413a063-0b84-2ffe-0672-06da8d01342e": {
+        "appPageName": "login",
+        "componentName": "loginComponent",
         "isEntry": false
     }
 }

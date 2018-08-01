@@ -5,25 +5,24 @@ import { BDataModelService } from '../../service/bDataModel.service';
 @Injectable()
 export class buserdashboardService {
 
-    cardData = [
+    activeusers = [
         {
             cardTitle: '10 Months',
             cardSubTitle: 'Active duration',
             cardContent: 'And four weeks',
         },
     ];
-    cardData1 = [
+    userviews = [
         {
             cardTitle: '226,802',
             cardSubTitle: 'page views',
             cardContent: 'Page views in last month',
         },
     ];
-    cardData2 = [
+    useractivity = [
         {
             cardTitle: '$1 206,90',
-            cardSubTitle: 'All Income',
-            cardTitle1: 'Social users',
+            cardSubTitle: 'All INCOME',
             cardDesc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
             cardIcon: 'timeline',
             cardbuffer: '80',
@@ -35,7 +34,7 @@ export class buserdashboardService {
         },
         {
             cardTitle: '201',
-            cardSubTitle: 'Page Views',
+            cardSubTitle: 'PAGE VIEWS',
             cardDesc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum.',
             cardIcon: 'share',
             cardbuffer: '40',
@@ -69,10 +68,10 @@ export class buserdashboardService {
 
 
     ];
-    cardData3 = [
+    currentactivity = [
         {
             cardTitle: '$1 206,90',
-            cardSubTitle: 'ACTIVITY',
+            cardSubTitle: 'Current Activity',
             cardTitle1: 'Social users',
             cardDesc: 'Lorem Ipsum is simply dummy text of the printing simply all dummy text. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been. ',
             cardIcon: 'group_add',
@@ -89,26 +88,25 @@ export class buserdashboardService {
 
         }
     ];
-    cardData4 = [
+    userimprovements = [
         {
 
-            cardSubTitle: 'Improvements',
+            cardSubTitle: 'User Improvements',
             cardIcon: 'group',
             cardinfo: 'Users Activity',
             cardDesc: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
         }
     ];
 
-    cardData5 = [
+    lastactiveusers = [
         {
-
-            cardSubTitle: 'Last Activity',
+            cardSubTitle: 'Users Last Activity',
             cardIcon: 'local_activity',
 
         }
     ];
 
-    carditem = [
+    useritems = [
         {
             cardTitle: '2,773',
             cardSubTitle: 'Tota Messages Sent',
@@ -134,7 +132,7 @@ export class buserdashboardService {
     menu = [
         {
             nav_one: 'Dashboard',
-        },
+        }
     ];
     menuitem = [
         {
@@ -145,6 +143,12 @@ export class buserdashboardService {
         },
         {
              navitem: 'App Views'
+        },
+         {
+             navitem: 'Charts'
+        },
+        {
+             navitem: 'Box Transitions'
         }
     ];
 
