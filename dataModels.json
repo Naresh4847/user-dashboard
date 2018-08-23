@@ -1,0 +1,298 @@
+{
+    "c1f9e828-3e78-f462-b464-9b54b88c9613": {
+        "dataModelId": "c1f9e828-3e78-f462-b464-9b54b88c9613",
+        "name": "userviews",
+        "description": "Card_1_LeftString",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "cardTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardSubTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardContent",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "5c1931c3-6a55-a12c-c7db-acf119cab1f7": {
+        "dataModelId": "5c1931c3-6a55-a12c-c7db-acf119cab1f7",
+        "name": "activeduration",
+        "description": "activeduration Mode",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "cardTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardSubTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardContent",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "c22b2bcd-36a3-d442-09cd-fc0358813572": {
+        "dataModelId": "c22b2bcd-36a3-d442-09cd-fc0358813572",
+        "name": "userActivity",
+        "description": "user activity with all income",
+        "dataSource": "dashboard.rt",
+        "fields": [
+            {
+                "name": "cardTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardSubTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardContent",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardDesc",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardIcon",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardbuffer",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardinfo",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardinfo1",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardvalue",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardvalue1",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "244b54a3-ad29-9fb2-1d8d-5912ce30a7a9": {
+        "dataModelId": "244b54a3-ad29-9fb2-1d8d-5912ce30a7a9",
+        "name": "currentActivity",
+        "description": "current Activity users",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "cardTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardSubTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardTitle1",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardDesc",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardIcon",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardinfo",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardinfo1",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardvalue",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardvalue1",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardinfo2",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardinfo3",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardvalue2",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardvalue3",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "b0356094-164a-fc41-4615-0aec87ce6be0": {
+        "dataModelId": "b0356094-164a-fc41-4615-0aec87ce6be0",
+        "name": "lastActivity",
+        "description": "users last activity",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "cardSubTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardIcon",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "6586573f-c7d6-fd74-b7a7-60a65eba1674": {
+        "dataModelId": "6586573f-c7d6-fd74-b7a7-60a65eba1674",
+        "name": "userimprovements",
+        "description": "users improvements",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "cardSubTitle",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardIcon",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "cardDesc",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    },
+    "294f2c0b-9ae2-59ee-6033-211a2c6a3f6f": {
+        "dataModelId": "294f2c0b-9ae2-59ee-6033-211a2c6a3f6f",
+        "name": "user",
+        "description": "user master ",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "user",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "userviews",
+                "complexTypeId": "c1f9e828-3e78-f462-b464-9b54b88c9613"
+            },
+            {
+                "name": "activeduration",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "activeduration",
+                "complexTypeId": "5c1931c3-6a55-a12c-c7db-acf119cab1f7"
+            },
+            {
+                "name": "userActivity",
+                "fieldType": 5,
+                "isArray": true,
+                "complexTypeName": "userActivity",
+                "complexTypeId": "c22b2bcd-36a3-d442-09cd-fc0358813572"
+            },
+            {
+                "name": "currentActivity",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "currentActivity",
+                "complexTypeId": "244b54a3-ad29-9fb2-1d8d-5912ce30a7a9"
+            },
+            {
+                "name": "lastActivity",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "lastActivity",
+                "complexTypeId": "b0356094-164a-fc41-4615-0aec87ce6be0"
+            },
+            {
+                "name": "userimprovements",
+                "fieldType": 5,
+                "isArray": false,
+                "complexTypeName": "userimprovements",
+                "complexTypeId": "6586573f-c7d6-fd74-b7a7-60a65eba1674"
+            }
+        ]
+    },
+    "a23a045b-37cf-340f-7920-b32ac571e299": {
+        "dataModelId": "a23a045b-37cf-340f-7920-b32ac571e299",
+        "name": "userlist",
+        "description": "register user",
+        "dataSource": "dashboard-rt",
+        "fields": [
+            {
+                "name": "name",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "username",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "email",
+                "fieldType": 2,
+                "isArray": false
+            },
+            {
+                "name": "password",
+                "fieldType": 2,
+                "isArray": false
+            }
+        ]
+    }
+}

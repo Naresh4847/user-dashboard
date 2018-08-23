@@ -1,0 +1,20 @@
+<div fxLayout="row " fxLayoutAlign="center center" fxShow="true" fxHide="false" fxFill="">
+  <div fxLayout="column " fxFlex="100" fxLayoutAlign="  none" fxShow="true" fxHide="false">
+    <div fxLayout="row " style="height: 80%;" fxLayoutAlign="center center" fxShow="true" fxHide="false">
+      <mat-card>
+        <mat-card-title>Admin Login</mat-card-title>
+        <form>
+          <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+            <mat-form-field>
+              <input matInput="" [(ngModel)]="username" name="username" type="text" placeholder="Username" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input matInput="" [(ngModel)]="password" name="password" type="password" placeholder="Password" required>
+            </mat-form-field>
+            <button mat-raised-button="" color="warn" (click)="login()">Login</button>
+          </div>
+        </form>
+      </mat-card>
+    </div>
+  </div>
+</div>

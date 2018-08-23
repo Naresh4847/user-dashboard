@@ -1,0 +1,182 @@
+<div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false" *ngIf="userDetails">
+  <div fxLayout="column " style=" position: fixed; top: 0;  right: 0;     left: 0;     z-index: 9;width:100%;" fxLayoutAlign=" " fxShow="true" fxHide="false">
+    <mat-toolbar color="primary">
+      <div fxLayout="row " fxFlex="10" fxLayoutGap="20px" fxLayoutAlign=" " fxShow="true" fxHide="false">
+        <div fxLayout="row " fxLayoutGap="50px" fxLayoutAlign=" " fxShow="true" fxHide="false" *ngIf="modeVal == &apos;over&apos;">
+          <mat-icon class="material-icons" (click)="sidenav.toggle()" matTooltip="menu">menu</mat-icon>
+        </div>
+      </div>
+      <div fxLayout="row " fxFlex="87" fxLayoutGap="45px" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+        <div fxLayout="row wrap" fxFlex="2" fxLayoutAlign="end end" fxShow="true" fxHide="false">
+          <mat-icon class="pointer" matTooltip="LogOut" (click)="logout()" fxShow.xs="true">power_settings_new</mat-icon>
+        </div>
+      </div>
+    </mat-toolbar>
+  </div>
+  <mat-sidenav-container fullscreen="">
+    <mat-sidenav #sidenav="" [mode]="modeVal" [opened]="opened" [fixedInViewport]="fixedSideNav" class="sidenav" (toggle)="sidenav.toggle()">
+      <div fxLayout="column " fxLayoutGap="5px" fxLayoutAlign="start start" fxShow="true" fxHide="false">
+        <mat-card>
+          <div fxLayout="column " fxLayoutAlign="center center" fxShow="true" fxHide="false">
+            <img mat-card-image="" style="width:40%" imgSrc="Web/Icons/employ.png">
+            <mat-card-subtitle>Admin</mat-card-subtitle>
+            <p class="user_conetent">Updated income </p>
+            <mat-card-title>$260 104,200</mat-card-title>
+          </div>
+        </mat-card>
+        <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false" *ngIf="true">
+          <mat-accordion style="overflow-y:overlay;height:245px;">
+            <mat-expansion-panel style="background-color:green">
+              <mat-expansion-panel-header *ngFor="let card of menu">
+                <mat-panel-title label="{{card.nav_one}}">
+                  More...
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-list *ngFor="let card of menuitem">
+                <mat-list-item>{{card.navitem}}</mat-list-item>
+              </mat-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </div>
+      </div>
+    </mat-sidenav>
+    <div fxLayout="column " style="overflow-y:hidden;" class="row1" fxFlex="calc(100%-128px)" fxLayoutGap="25px" fxLayoutAlign=" " fxShow="true" fxHide="false">
+      <div fxLayout="column " fxLayoutAlign="center center" fxShow="true" fxHide="false">
+        <mat-card-title style="padding:40px;">Welcome to User Dashboard Theme</mat-card-title>
+        <mat-card-subtitle>Special Admin Theme for medium and large web applications with very clean and aesthetic style and feel.</mat-card-subtitle>
+      </div>
+      <mat-card>
+        <div fxLayout="row " fxLayoutAlign="center center" fxShow="true" fxHide="false" fxLayout.xs="column">
+          <div fxLayout="column " class="row1_on1" fxFlex="30" fxLayoutAlign="space-around center" fxShow="true" fxHide="false">
+            <mat-card-subtitle>{{userDetails.userviews.cardSubTitle}}</mat-card-subtitle>
+            <h1>{{userDetails.userviews.cardTitle}}</h1>
+            <mat-card-subtitle>{{userDetails.userviews.cardContent}}</mat-card-subtitle>
+          </div>
+          <div fxLayout="column wrap" class="row1_on2" fxFlex="40" fxLayoutAlign="space-around center" fxShow="true" fxHide="false" fxLayout.xs="column" fxFlex.xs="100">
+            <canvas baseChart="" [datasets]="lineChartData" style="width:100% !important;" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" chartType="line" (chartHover)="chartHovered($event)"
+              (chartClick)="hartClicked($event)"></canvas>
+          </div>
+          <div fxLayout="column " class="row1_on3" fxFlex="30" fxLayoutAlign="space-around center" fxShow="true" fxHide="false">
+            <mat-card-subtitle>{{userDetails.activeduration.cardSubTitle}}</mat-card-subtitle>
+            <h1>{{userDetails.activeduration.cardTitle}}</h1>
+            <mat-card-subtitle>{{userDetails.activeduration.cardContent}}</mat-card-subtitle>
+          </div>
+        </div>
+      </mat-card>
+      <div fxLayout="row wrap" fxLayoutAlign="space-between none" fxShow="true" fxHide="false" fxLayout.xs="column">
+        <div fxLayout="column wrap" fxFlex="24" fxLayoutAlign="  none" fxShow="true" fxHide="false" *ngFor="let card of userDetails.useractivity" fxFlex.sm="45.5">
+          <mat-card style="height:100%;     margin-bottom: 15px;">
+            <div fxLayout="row " fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{card.cardSubTitle}}</mat-card-subtitle>
+              </div>
+              <div fxLayout="row " fxLayoutAlign="start start" fxShow="true" fxHide="false">
+                <mat-icon style="font-size:15px;" class="material-icons">{{card.cardIcon}}</mat-icon>
+              </div>
+            </div>
+            <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+              <mat-card-title style="color:#ff1c00">{{card.cardTitle}}</mat-card-title>
+              <mat-card-subtitle>{{card.cardContent}}</mat-card-subtitle>
+              <mat-card-subtitle class="user_content">{{card.cardDesc}}</mat-card-subtitle>
+              <mat-progress-bar style="color:#2cab44 !important;" mode="Buffer" value="{{card.cardbuffer}}"></mat-progress-bar>
+            </div>
+            <div fxLayout="row " class="sub-top" fxLayoutGap="10px" fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+              <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{card.cardinfo}}</mat-card-subtitle>
+                <mat-card-subtitle style="font-size:18px;">{{card.cardvalue}}</mat-card-subtitle>
+              </div>
+              <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{card.cardinfo1}}</mat-card-subtitle>
+                <mat-card-subtitle style="font-size:18px;">{{card.cardvalue2}}</mat-card-subtitle>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+      <div fxLayout="row " fxLayoutGap="20px" fxLayoutAlign="space-between " fxShow="true" fxHide="false" fxLayout.xs="column" fxFlex.sm="40%">
+        <div fxLayout="column " fxFlex="25" fxLayoutAlign=" " fxShow="true" fxHide="false">
+          <mat-card style="  height: 100%;">
+            <div fxLayout="row " fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+              <div fxLayout="row " fxLayoutAlign="start start" fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{userDetails.currentactivity.cardSubTitle}}</mat-card-subtitle>
+              </div>
+              <div fxLayout="row " fxLayoutAlign="end start" fxShow="true" fxHide="false">
+                <mat-icon>{{userDetails.currentactivity.cardIcon}}</mat-icon>
+              </div>
+            </div>
+            <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+              <mat-card-subtitle>{{userDetails.currentactivity.cardTitle1}}</mat-card-subtitle>
+              <mat-card-subtitle class="user_content">{{userDetails.currentactivity.cardDesc}}</mat-card-subtitle>
+            </div>
+            <div fxLayout="column " fxLayoutAlign="  none" fxShow="true" fxHide="false">
+              <div fxLayout="row wrap" fxFlex="100" fxLayoutAlign="space-between center" fxShow="true" fxHide="false">
+                <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                  <mat-card-title>{{userDetails.currentactivity.cardinfo}}</mat-card-title>
+                  <mat-card-subtitle>{{userDetails.currentactivity.cardvalue}}</mat-card-subtitle>
+                </div>
+                <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                  <mat-card-title>{{userDetails.currentactivity.cardinfo1}}</mat-card-title>
+                  <mat-card-subtitle>{{userDetails.currentactivity.cardvalue1}}</mat-card-subtitle>
+                </div>
+              </div>
+              <div fxLayout="row wrap" fxLayoutAlign="space-between center" fxShow="true" fxHide="false">
+                <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                  <mat-card-title>{{userDetails.currentactivity.cardinfo2}}</mat-card-title>
+                  <mat-card-subtitle>{{userDetails.currentactivity.cardvalue2}}</mat-card-subtitle>
+                </div>
+                <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                  <mat-card-title>{{userDetails.currentactivity.cardinfo3}}</mat-card-title>
+                  <mat-card-subtitle>{{userDetails.currentactivity.cardvalue3}}</mat-card-subtitle>
+                </div>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+        <div fxLayout="column " fxFlex="40" fxLayoutAlign=" " fxShow="true" fxHide="false">
+          <mat-card style="  height: 100%;">
+            <div fxLayout="row " fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{userDetails.userimprovements.cardSubTitle}}</mat-card-subtitle>
+              </div>
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-icon>{{userDetails.userimprovements.cardIcon}}</mat-icon>
+              </div>
+            </div>
+            <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+              <mat-card-subtitle class="user_content">{{userDetails.userimprovements.cardDesc}}</mat-card-subtitle>
+            </div>
+            <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+              <canvas baseChart="" [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" chartType="line"></canvas>
+            </div>
+          </mat-card>
+        </div>
+        <div fxLayout="column " fxFlex="25" fxLayoutAlign=" " fxShow="true" fxHide="false">
+          <mat-card style="  height: 100%;">
+            <div fxLayout="row " fxLayoutAlign="space-between start" fxShow="true" fxHide="false">
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{userDetails.lastactiveusers.cardSubTitle}}</mat-card-subtitle>
+              </div>
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-icon>{{userDetails.lastactiveusers. cardIcon}}</mat-icon>
+              </div>
+            </div>
+            <div fxLayout="row " fxLayoutAlign="space-between start" fxShow="true" fxHide="false" *ngFor="let card of userDetails.useritems">
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <div fxLayout="column " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                  <mat-card-title>{{card.cardTitle}}</mat-card-title>
+                  <mat-card-subtitle>{{card.cardSubTitle}}</mat-card-subtitle>
+                </div>
+              </div>
+              <div fxLayout="row " fxLayoutAlign=" " fxShow="true" fxHide="false">
+                <mat-card-subtitle>{{card.cardSubTitle1}}</mat-card-subtitle>
+              </div>
+            </div>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+    <mat-toolbar color="primary" style="display: block;height:40px; position: fixed;      right: 0;      bottom: 0;      left: 0;      text-align:center;">
+      <h6 style="color:white;font-size:15px;">Neutrinos India Pvt Ltd @2018</h6>
+    </mat-toolbar>
+  </mat-sidenav-container>
+</div>

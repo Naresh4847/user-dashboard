@@ -2,7 +2,7 @@
  "nodes": {
   "node-red": {
    "name": "node-red",
-   "version": "0.17.5",
+   "version": "0.18.7",
    "local": false,
    "nodes": {
     "sentiment": {
@@ -349,12 +349,32 @@
      "local": false,
      "module": "node-red",
      "file": "/opt/Neutrinos Studio/resources/app.asar.unpacked/node_modules/node-red/nodes/core/storage/50-file.js"
+    },
+    "sort": {
+     "name": "sort",
+     "types": [
+      "sort"
+     ],
+     "enabled": true,
+     "local": false,
+     "module": "node-red",
+     "file": "/opt/Neutrinos Studio/resources/app.asar.unpacked/node_modules/node-red/nodes/core/logic/18-sort.js"
+    },
+    "batch": {
+     "name": "batch",
+     "types": [
+      "batch"
+     ],
+     "enabled": true,
+     "local": false,
+     "module": "node-red",
+     "file": "/opt/Neutrinos Studio/resources/app.asar.unpacked/node_modules/node-red/nodes/core/logic/19-batch.js"
     }
    }
   },
   "node-red-node-email": {
    "name": "node-red-node-email",
-   "version": "0.1.27",
+   "version": "0.1.29",
    "local": false,
    "nodes": {
     "email": {
@@ -389,7 +409,7 @@
   },
   "node-red-node-rbe": {
    "name": "node-red-node-rbe",
-   "version": "0.1.14",
+   "version": "0.2.3",
    "local": false,
    "nodes": {
     "rbe": {
@@ -406,7 +426,7 @@
   },
   "node-red-node-twitter": {
    "name": "node-red-node-twitter",
-   "version": "0.1.13",
+   "version": "1.0.1",
    "local": false,
    "nodes": {
     "twitter": {

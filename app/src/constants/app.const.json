@@ -1,5 +1,12 @@
 {
-  "dataSource": {
-
-  }
+    "dataSource": {
+        "userviews": "dashboard-rt",
+        "activeduration": "dashboard-rt",
+        "userActivity": "dashboard.rt",
+        "currentActivity": "dashboard-rt",
+        "lastActivity": "dashboard-rt",
+        "userimprovements": "dashboard-rt",
+        "user": "dashboard-rt",
+        "userlist": "dashboard-rt"
+    }
 }

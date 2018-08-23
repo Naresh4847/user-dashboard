@@ -18,6 +18,7 @@ export const environment = {
         "appDataSource": "dashboard-rt",
         "appAuthenticationStrategy": "localAuth",
         "basicAuthUser": "username",
-        "basicAuthPassword": "password"
+        "basicAuthPassword": "password",
+        "authDataSource": "dashboard-rt"
     }
 }

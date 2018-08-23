@@ -1,39 +1,36 @@
 import { PageNotFoundComponent } from '../not-found.component';
 import { LayoutComponent } from '../layout/layout.component';
-import { NotificationService } from '../service/notification.service';
-import { LocalStorageService } from '../service/local-storage.service';
 import { ImgSrcDirective } from '../directives/imgSrc.directive';
-import { BAuthGuard } from '../service/bAuthGuard.service';
-import { BAppService } from '../service/bApp.service';
-import { BLocalStorageService } from '../service/bLocalStorage.service';
-import { BSessionStorage } from '../service/bSessionStorage.service';
-import { BLoginService } from '../service/bLogin.service';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { BHttp } from '../service/bHTTP';
-import { BHTTPLoader } from '../service/bHTTPLoader';
-import { PubSubService } from '../service/pubSub.service';
-import { AlertComponent } from '../alertComponent/alert.component';
-import { BDataSourceService } from '../service/bDataSource.service';
-import { bhiveMapComponent } from '../mapComponent/map.component';
 import { APP_INITIALIZER } from '@angular/core';
-import { BLogoutService } from '../service/bLogout.service';
-import { BDataModelService} from '../service/bDataModel.service';
-import { bsignatureComponent } from '../bsignatureComponent/bsignature.component';
-import { btoggleoptionsComponent } from '../btoggleoptionsComponent/btoggleoptions.component';
+import { NDataSourceService } from '../n-services/n-dataSorce.service';
+import { environment } from '../../environments/environment';
+import { NMapComponent } from '../n-components/nMapComponent/n-map.component';
+import { NLocaleResource } from '../n-services/n-localeResources.service';
+import { NAuthGuardService } from 'neutrinos-seed-services';
 
-//CORE_REFERENCE_IMPORTS
-//CORE_REFERENCE_IMPORT-loginComponent
-import { loginComponent } from '../loginComponent/login.component';
-//CORE_REFERENCE_IMPORT-dashboardComponent
-import { dashboardComponent } from '../dashboardComponent/dashboard.component';
-//CORE_REFERENCE_IMPORT-userComponent
-import { userComponent } from '../userComponent/user.component';
-
-
-export function startupServiceFactory(startupService: BLocalStorageService): Function {
-  return () => startupService.initStorage();
+window['neutrinos'] = {
+  environments: environment
 }
 
+//CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-buserdashboardService
+import { buserdashboardService } from '../services/buserdashboard/buserdashboard.service';
+//CORE_REFERENCE_IMPORT-loginComponent
+import { loginComponent } from '../components/loginComponent/login.component';
+//CORE_REFERENCE_IMPORT-dashboardComponent
+import { dashboardComponent } from '../components/dashboardComponent/dashboard.component';
+//CORE_REFERENCE_IMPORT-userComponent
+import { userComponent } from '../components/userComponent/user.component';
+
+/**
+ * Reads datasource object and injects the datasource object into window object
+ * Injects the imported environment object into the window object
+ *
+ */
+export function startupServiceFactory(startupService: NDataSourceService) {
+  return () => startupService.getDataSource();
+}
 
 /**
 *bootstrap for @NgModule
@@ -42,11 +39,11 @@ export const appBootstrap: any = [
   LayoutComponent,
 ];
 
+
 /**
 *Entry Components for @NgModule
 */
 export const appEntryComponents: any = [
-  AlertComponent
   //CORE_REFERENCE_PUSH_TO_ENTRY_ARRAY
 ];
 
@@ -56,9 +53,8 @@ export const appEntryComponents: any = [
 export const appDeclarations = [
   ImgSrcDirective,
   LayoutComponent,
-  AlertComponent,
-  bsignatureComponent,
-  btoggleoptionsComponent,
+  PageNotFoundComponent,
+  NMapComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-loginComponent
 loginComponent,
@@ -66,39 +62,26 @@ loginComponent,
 dashboardComponent,
 //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-userComponent
 userComponent,
-  PageNotFoundComponent,
-  bhiveMapComponent
+
 ];
 
 /**
 * provider for @NgModuke
 */
 export const appProviders = [
-  {
-    provide: HTTP_INTERCEPTORS,
-    useClass: BHttp,
-    multi: true
-  },
+  NDataSourceService,
+  NLocaleResource,
   {
     // Provider for APP_INITIALIZER
     provide: APP_INITIALIZER,
     useFactory: startupServiceFactory,
-    deps: [BLocalStorageService],
+    deps: [NDataSourceService],
     multi: true
   },
-  NotificationService,
-  BAuthGuard,
+  NAuthGuardService,
   //CORE_REFERENCE_PUSH_TO_PRO_ARRAY
-  LocalStorageService,
-  PubSubService,
-  BLoginService,
-  BSessionStorage,
-  BLocalStorageService,
-  BAppService,
-  BLogoutService,
-  BHTTPLoader,
-  BDataSourceService,
-  BDataModelService
+//CORE_REFERENCE_PUSH_TO_PRO_ARRAY-buserdashboardService
+buserdashboardService,
 
 ];
 
@@ -107,6 +90,5 @@ export const appProviders = [
 */
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
-export const appRoutes = [{path: 'dashboard', component: dashboardComponent,
-children: [{path: 'user', component: userComponent}]},{path: '', redirectTo: 'dashboard/user', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
+export const appRoutes = [{path: 'login', component: loginComponent},{path: 'dashboard', component: dashboardComponent},{path: '', redirectTo: 'login', pathMatch: 'full'},{path: '**', component: PageNotFoundComponent}]
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

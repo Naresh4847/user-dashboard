@@ -1,30 +1,28 @@
 {
     "routes": [
         {
+            "path": "login",
+            "component": "loginComponent",
+            "pathMatch": "",
+            "redirectTo": "",
+            "resolve": "",
+            "data": "",
+            "canActivate": ""
+        },
+        {
             "path": "dashboard",
             "component": "dashboardComponent",
             "pathMatch": "",
             "redirectTo": "",
             "resolve": "",
             "data": "",
-            "canActivate": "",
-            "children": [
-                {
-                    "path": "user",
-                    "component": "userComponent",
-                    "pathMatch": "",
-                    "redirectTo": "",
-                    "resolve": "",
-                    "data": "",
-                    "canActivate": ""
-                }
-            ]
+            "canActivate": ""
         },
         {
             "path": "''",
             "component": "",
             "pathMatch": "full",
-            "redirectTo": "dashboard/user",
+            "redirectTo": "login",
             "resolve": "",
             "data": "",
             "canActivate": ""

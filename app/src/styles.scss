@@ -1,8 +1,7 @@
-/*Importing default angular material css theme. */
 
-@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+// @import "mytheme.scss";
 @import "nDefaults.scss";
-
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 body,.mat-card-content,p, .mat-card-title{
     color: #6a6c6f;
     font-family: 'Raleway', sans-serif;
@@ -12,7 +11,7 @@ mat-card-subtitle{
     color: slategray !important;
 }
 h1, h2, h3, h4, h5, h6, {
-    font-weight: 700;
+    font-weight: 700; 
     color: #696c6e;
     font-family: 'Raleway', sans-serif;
 }
@@ -24,19 +23,9 @@ h1, h2, h3, h4, h5, h6, {
 .mat-card-image:first-child {
     margin-top: 0 !important;
 }
-.mat-toolbar {
-    height: 55px;
-    border: 0;
-    z-index: 10;
-    background: #ff0909 !important;
-    color:white;
-}
 .row1{
     padding:25px 40px 40px 40px;
     background: #c1c1bd;
-}
-.mat-drawer-container[fullscreen]{
-    top:65px !important;
 }
 .sub-top{
     padding-top: 8px !important;
@@ -44,4 +33,20 @@ h1, h2, h3, h4, h5, h6, {
 .user_content{
      font-weight: 100 !important;
 }
+.sidenav{
+    position: absolute !important;
+    top:64px !important;
+    margin-bottom:40px;
+    top: 55px;
+    overflow:hidden;
+    
+}
+.pointer{
+    cursor: pointer;
+}
+.card{
+    font-size: 17px;
+}
+
+
 

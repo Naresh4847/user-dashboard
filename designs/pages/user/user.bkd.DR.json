@@ -1,12 +1,7 @@
 {
     "54d98787-ede1-76be-f7d6-d9ede8bac363": {
-        "name": "FlexLayoutCol",
-        "guid": "54d98787-ede1-76be-f7d6-d9ede8bac363",
-        "template": "<div fxLayout=\"column\" %style% %class% %fxFlex% %fxLayoutWrap% %fxLayoutGap% %fxLayoutAlign% %fxShow% %fxHide% %bCustomProps%></div>",
-        "designerTemplate": "<div class=\"column drop bkeeper-container-label\"></div>",
-        "paletteTemplate": "Flex Layout Column",
-        "templateUrl": "https://github.com/angular/flex-layout/wiki/fxLayout-API",
-        "htmlAttributes": [
+        "paletteKey": "FlexLayoutCol",
+        "designerReference": [
             {
                 "0": false,
                 "_key": "style",
@@ -28,9 +23,9 @@
                 "_attrDef": "p"
             },
             {
-                "_key": "fxLayoutWrap",
+                "_key": "wrap",
                 "_value": "",
-                "_type": "kv",
+                "_type": "a",
                 "_attrDef": "p"
             },
             {
@@ -42,9 +37,9 @@
             },
             {
                 "5": false,
-                "_key": "fxLayoutAlign",
+                "_key": "layoutAlign",
                 "_value": "",
-                "_type": "kv",
+                "_type": "a",
                 "_attrDef": "p"
             },
             {
@@ -58,8 +53,136 @@
                 "_value": "false",
                 "_type": "kv",
                 "_attrDef": "p"
+            },
+            {
+                "_key": "pLayoutAlign",
+                "_value": "",
+                "_type": "a",
+                "_attrDef": "p"
+            },
+            {
+                "_key": "fxFill",
+                "_value": "fxFill",
+                "_type": "a",
+                "_attrDef": "c"
             }
         ],
-        "type": 1
+        "a249dd7e-f5ad-e862-a4c4-b86137c93759": {
+            "paletteKey": "NG-Toolbar",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "color",
+                    "_value": "primary",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "content",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
+        },
+        "335d074c-baa2-9608-7c32-fce27b0ea598": {
+            "paletteKey": "FlexLayoutRow",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxFlex",
+                    "_value": "calc(100%-128px)",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxLayoutGap",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "wrap",
+                    "_value": "wrap",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "layoutAlign",
+                    "_value": "start",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "pLayoutAlign",
+                    "_value": "stretch",
+                    "_type": "a",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxShow",
+                    "_value": "true",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "fxHide",
+                    "_value": "false",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                }
+            ]
+        },
+        "a34f302f-27ca-a34f-12b2-f5b2787d4e16": {
+            "paletteKey": "NG-Toolbar",
+            "designerReference": [
+                {
+                    "_key": "style",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "class",
+                    "_value": "",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "color",
+                    "_value": "primary",
+                    "_type": "kv",
+                    "_attrDef": "p"
+                },
+                {
+                    "_key": "content",
+                    "_value": "",
+                    "_type": "a",
+                    "_attrDef": "p"
+                }
+            ]
+        }
     }
 }
